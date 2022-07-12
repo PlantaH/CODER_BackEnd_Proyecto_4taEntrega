@@ -10,10 +10,10 @@ const {
 
 const router = express.Router();
 
-router.get("/", middlewares.isRegister, getOrdenes); //Lista las ordenes creadas por el usuario
-router.get("/all", middlewares.isAdmin, getAllOrdenes); //Lista todas las ordenes creadas por todos los usuarios
-router.post("/:idCarrito", middlewares.isRegister, createOrder); //Crea una nueva orden segun un carrito
-router.put("/:idOrden", middlewares.isAdmin, updateOrder); //Modifica una orden segun su id
-router.delete("/:idOrden", middlewares.isAdmin, deleteOrder); //Borra una orden segun su id
+router.get("/", middlewares.isRegister, getOrdenes);  
+router.get("/all", middlewares.isAdmin, getAllOrdenes);  
+router.post("/:idCarrito", middlewares.isRegister, createOrder);  
+router.put("/:idOrden", middlewares.isAdmin, updateOrder); 
+router.delete("/:idOrden", middlewares.isAdmin, deleteOrder);  
 
 module.exports = router;

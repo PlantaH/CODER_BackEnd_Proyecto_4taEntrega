@@ -7,7 +7,7 @@ https://hdcoder.herokuapp.com/
 ## Instalacion
 Se necesita instalar [Node.js](https://nodejs.org/)
 
-Instalar estas dependencias 
+Instalar las dependencias 
 ```sh
 npm i
 npm start
@@ -41,9 +41,80 @@ npm start
 * WSP_FROM
 * WSP_TO 
  
-## Documentacion
-https://documenter.getpostman.com/view/17626076/UVsJxSwD#854444aa-2164-4a62-8a7a-48f822ecd6cd
+## Endpoints HTTP 
 
+### Productos
+	method: POST
+    /api/productos ---> Alta
+    {    nombre, descripcion, codigo, thumbail, precio, stock}
 
+    method: GET
+    /api/productos ---> Lista todos los productos
+    /api/productos /:id ---> Lista por id 
 
+    method: DELETE
+    /api/productos /:id ---> Elimina un producto por id
+
+    method: PUT
+    /api/productos/:id ---> Modifica un item por id 
+    {    nombre, descripcion, codigo, thumbail, precio, stock}
+	
+### Carrito
+	method: POST
+    /api/carrito ---> Alta
+    /api/carrito/:idCarrito/:idPto ---> Alta producto al carrito
+        
+    method: DELETE
+    /api/carrito/:id ---> Elimina un carrito
+    /api/carrito/:idCarrito/:idPto ---> Elimina producto del carrito
+
+    method: GET
+    /api/carrito---> Lista todos los carritos
+    /api/carrito/:id ---> Lista por id 
+
+### Registro 
+    method: POST
+    /register---> alta cliente
+    {   username, password, nombre, direccion, edad, telefono, avatar }
+	
+### Login
+    method: GET
+    /login ---> Lista datos cliente
+
+    method: POST
+    /login ---> valida datos cliente y conecta
+    {    username, password }
+ 
+### Logout
+    method: GET
+	/logout---> desconecta cliente
+	 
+### Ordenes
+    method: GET
+    /api/ordenes---> Lista todas las ordenes
+
+    method: POST
+    /api/ordenes/:idCarrito---> Alta orden con carrito 
+
+### Chat
+    method: POST
+    /api/chat ---> Envio mensaje admin chat general
+    { msg }
+
+    /api/chat ---> Envio mensaje usuario chat general
+    { msg }
+
+    /api/chat/private ---> Envio mensaje usuario chat privado
+    { msg }
+
+    /api/chat/private?email=usuario ---> Envio mensaje admin chat privado
+
+    method: GET
+    /api/chat ---> Listado mensaje chat general
+
+    /api/chat/:usuario  ---> Listado mensaje de un usuario en el chat general
+
+    /api/chat/private ---> Listado mensaje chat privado
+
+    /api/chat/private?email=usuario ---> Listado mensaje admin chat privado
  

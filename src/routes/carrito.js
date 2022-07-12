@@ -11,12 +11,11 @@ const {
 
 const router = express.Router();
 
-
-router.post("/", middlewares.isRegister, createCarrito);//Post crea un nuevo carrito
-router.post("/:idCarrito/:idPto", middlewares.isRegister, addPtoToCarrito); //Agrega un pto al carrito
-router.delete("/:id", middlewares.isRegister, deleteCarrito); //Borra un carrito
-router.delete("/:idCarrito/:idPto", middlewares.isRegister, deletePtoFromCarrito); //Borra un pto del carrito
-router.get("/:id", middlewares.isRegister, getPtosFromCarrito); //Lista los productos de un carrito
-router.get("/", middlewares.isAdmin, getCarritos); //Lista todos los carritos
+router.post("/", middlewares.isRegister, createCarrito);
+router.post("/:idCarrito/:idPto", middlewares.isRegister, addPtoToCarrito); 
+router.delete("/:id", middlewares.isRegister, deleteCarrito);  
+router.delete("/:idCarrito/:idPto", middlewares.isRegister, deletePtoFromCarrito);  
+router.get("/:id", middlewares.isRegister, getPtosFromCarrito); 
+router.get("/", middlewares.isAdmin, getCarritos); 
 
 module.exports = router;

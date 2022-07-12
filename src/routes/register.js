@@ -8,7 +8,7 @@ const passportConfig = require("../configs/passportConfig")
 
 router.post("/", upload.single('avatar'), passportConfig.authenticate("local-signup",{
     successRedirect:"/",
-    failureRedirect:"/registerError.html"
-})) //Crea un nuevo usuario
+    failureRedirect:"/registroError.html"
+}))  
 
 module.exports = router;
