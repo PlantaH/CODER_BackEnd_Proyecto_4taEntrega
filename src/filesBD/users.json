@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "6228a9cc74242aea95fa81d3"
+  },
+  "email": "test@test.com",
+  "password": "$2b$10$mfYJ//Rst2r/pcSM25SyD.iOsmqRAVn7/s71u85MXU2vwdZtGtn6O",
+  "nombre": "Pedro",
+  "apellido": "Gonzalez",
+  "telefono": "+542996301890",
+  "avatar": "8f474fbb3d5be1GGbab2f6629bee0jl4.png",
+  "isAdmin": false,
+  "carrito": {
+    "$oid": "6228a9cb74242aea95fa81cf"
+  },
+  "chat": {
+    "$oid": "6228a9cb74242aea95fa81d1"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6228aa5574242aea95fa81dd"
+  },
+  "email": "admin@admin.com",
+  "password": "$2b$10$Z.7RhMgY.zIrklvGqNfbOeVXhmJpfBFxeBvVYiJrFjWVnoUUOD/S2",
+  "nombre": "Gonzalo",
+  "apellido": "Martinez",
+  "telefono": "+542996301858",
+  "avatar": "8f474fbb3d5be1GGbab2f6629bee0jl4.png",
+  "isAdmin": true,
+  "carrito": {
+    "$oid": "6228aa5574242aea95fa81d9"
+  },
+  "chat": {
+    "$oid": "6228aa5574242aea95fa81db"
+  },
+  "__v": 0
+}]
