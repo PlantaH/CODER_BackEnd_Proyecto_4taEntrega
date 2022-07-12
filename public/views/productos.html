@@ -56,9 +56,7 @@
                 
                 <div class="container">
                     <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo"  required>
-                        </div>
+                       
                         <div class="col">
                             <input type="text" class="form-control" id="stock" name="stock" placeholder="Stock" required >
                         </div>
@@ -68,7 +66,10 @@
                     </div>
 
                     <div class="row" style="margin-top: 10px;">
-                      <div class="col">
+                        <div class="col">
+                            <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Categoria" required>
+                        </div>
+                        <div class="col">
                         <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo" required>
                       </div>
                       <div class="col">
@@ -150,7 +151,11 @@
             </div>
             <div class="modal-body">
                 <form onsubmit="return editarProducto()" name="formulario1">
-                    <input id="editarProductoID" name="prodId" type="hidden" value="">
+                    <input id="editarProductoID" name="editarProductoID"   type="hidden" value="">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Categoria</label>
+                        <input type="text" class="form-control" id="categoriaM" name="categoria" placeholder="Categoria del producto" >
+                    </div>
                     <div class="mb-3">
                         <label for="titulo" class="form-label">Titulo</label>
                         <input type="text" class="form-control" id="tituloM" name="titulo" placeholder="Titulo del producto" >
@@ -158,11 +163,7 @@
                     <div class="mb-3">
                         <label for="descripcion" class="form-label">Descripcion</label>
                         <input type="text" class="form-control" id="descripcionM" name="descripcion" placeholder="Descripcion del producto" >
-                    </div>
-                    <div class="mb-3">
-                        <label for="codigo" class="form-label">Codigo</label>
-                        <input type="text" class="form-control" id="codigoM" name="codigo" placeholder="Codigo del producto" >
-                    </div>
+                    </div>                    
                     <div class="mb-3">
                         <label for="stock" class="form-label">Stock</label>
                         <input type="text" class="form-control" id="stockM" name="stock" placeholder="Stock del producto" >
@@ -194,7 +195,7 @@
             </div>
             <div class="modal-body">
                 <form onsubmit="return borrarProducto()" name="formulario1">
-                    <input id="borrarProductoID" name="prodId" type="hidden" value="">
+                    <input id="borrarProductoID" name="borrarProductoID" type="hidden" value="">
                     Desea eliminar el producto?
             </div>
             <div class="modal-footer">
