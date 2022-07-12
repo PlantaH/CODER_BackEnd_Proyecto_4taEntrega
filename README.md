@@ -1,7 +1,7 @@
 # Backend Ecommerce CODER
 ## _Desarrollo de ecommerce by Hernan Dupuy_
 
-## Deploy
+## Ejecutable
 
 ## Instalacion
 Se necesita instalar [Node.js](https://nodejs.org/)
