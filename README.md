@@ -75,7 +75,7 @@ npm start
 ### Registro 
     method: POST
     /register---> alta cliente
-    {   username, password, nombre, direccion, edad, telefono, avatar }
+    {   username, password, nombre, apellido, direccion, edad, telefono, avatar }
 	
 ### Login
     method: GET
@@ -118,3 +118,19 @@ npm start
 
     /api/chat/private?email=usuario ---> Listado mensaje admin chat privado
  
+## Videos
+
+### CRUD Admin 
+* https://github.com/PlantaH/CODER_BackEnd_Proyecto_4taEntrega/blob/main/videos/admin.mp4
+
+### Registro y validacion del cliente 
+* https://github.com/PlantaH/CODER_BackEnd_Proyecto_4taEntrega/blob/main/videos/registroyvalidacion.mp4
+
+### Compra del cliente
+* https://github.com/PlantaH/CODER_BackEnd_Proyecto_4taEntrega/blob/main/videos/cliente.mp4
+
+### Chat general
+* https://github.com/PlantaH/CODER_BackEnd_Proyecto_4taEntrega/blob/main/videos/chatgeneral.mp4
+
+### Chat con el admin 
+* https://github.com/PlantaH/CODER_BackEnd_Proyecto_4taEntrega/blob/main/videos/chatadmin.mp4
