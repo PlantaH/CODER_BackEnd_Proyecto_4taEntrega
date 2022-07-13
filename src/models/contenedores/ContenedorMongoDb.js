@@ -91,13 +91,10 @@ class ContenedorMongoDB {
     }
   }
 
-  async update(nuevoElem) {
+  async update( nuevoElem) {
     try {
       renameField(nuevoElem, "id", "_id");
-      const { n, nModified } = await this.coleccion.replaceOne(
-        { _id: nuevoElem._id },
-        nuevoElem
-      );
+      const { n, nModified } = await this.coleccion.replaceOne( { _id: nuevoElem._id },  nuevoElem );      
       if (n == 0 || nModified == 0) {
         throw new Error("Error al actualizar: no encontrado");
       } else {

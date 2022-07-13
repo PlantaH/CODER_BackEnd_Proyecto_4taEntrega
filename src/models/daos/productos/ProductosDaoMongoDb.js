@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 class ProductosDaoMongoDb extends ContenedorMongoDB {
 
     constructor() {
-        super('productos',new Schema({
+        super('productos',new Schema({           
             timestamp: {type: String, required: true},
             nombre: {type: String, required: true},
             descripcion: {type: String, required: true},

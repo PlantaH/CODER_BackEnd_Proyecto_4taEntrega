@@ -55,11 +55,11 @@ const getPtosCategory = async (req,res) => {
     throw Error("Error en getPtosCategory productosController");
   }
   
-} //Lista los productos por categoria
+} 
 
 const createPto = async (req, res) => {
   try {
-    //Armo un nuevo PTO con los datos recibidos por parametro y datos locales como fecha
+   
     const { nombre, descripcion, categoria, thumbail, precio, stock } = req.body;
     const newObj = {
       timestamp: darFecha(),
@@ -81,7 +81,7 @@ const createPto = async (req, res) => {
 
 const updatePto = async (req, res) => {
   try {
-    //Armo un nuevo PTO con los datos recibidos por parametro
+  
     const { nombre, descripcion, categoria, thumbail, precio, stock } = req.body;
     const { id } = req.params;
     const ptoMod = {

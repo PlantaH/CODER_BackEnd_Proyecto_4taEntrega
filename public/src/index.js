@@ -176,10 +176,8 @@ function agregarProducto(){
  
 
 function editarProducto() {
- 
-    
     let inId = document.getElementById('editarProductoID').value;
-    
+     
     const url = `/api/productos/${inId}`; 
     let data = {
         nombre: document.getElementById('tituloM').value,
@@ -197,7 +195,7 @@ function editarProducto() {
             }
     }
      
-    fetch(url, request)
+   fetch(`/api/productos/${inId}`, request)
     .then(function(res) {       
         socket.emit("actualizacion");
     })
@@ -346,7 +344,7 @@ myModal.addEventListener('shown.bs.modal', function (event) {
 
   let modalBodyInput = exampleModal.querySelector('.modal-body input')
   
-  let inId = document.getElementById('idM');
+  let inId = document.getElementById('editarProductoID');
   let inCategoria = document.getElementById('categoriaM');
   let inTitulo = document.getElementById('tituloM');
   let inDescripcion = document.getElementById('descripcionM');  
@@ -365,7 +363,7 @@ myModal.addEventListener('shown.bs.modal', function (event) {
     fetch(url, request)
     .then((resp) => resp.json())
     .then(function(data) {
-        
+        editarProductoID.value = data.id;
         inCategoria.value = (data.categoria);
         inTitulo.value = (data.nombre);
         inDescripcion.value = (data.descripcion);        
@@ -380,7 +378,7 @@ myModal.addEventListener('shown.bs.modal', function (event) {
 myModal2.addEventListener('shown.bs.modal', function (event) {
     let button = event.relatedTarget;
      
-    let id = button.getAttribute('data-bs-id');
+    let id = button.getAttribute('data-bs-id');    
     document.getElementById('borrarProductoID').value = id;
 
      

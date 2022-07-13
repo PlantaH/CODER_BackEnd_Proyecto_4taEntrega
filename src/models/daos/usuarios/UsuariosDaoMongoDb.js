@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const ContenedorMongoDB = require ("../../contenedores/ContenedorMongoDb")
 const bcrypt = require('bcrypt');
-const saltRounds = 10;
+ 
 
 //Logs
 const logs = require("../../../logs/loggers");
